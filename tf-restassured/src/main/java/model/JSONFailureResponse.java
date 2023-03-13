@@ -8,6 +8,18 @@ public class JSONFailureResponse {
     private Integer status;
     private List<String> errors;
 
+    private String message;
+
+    public JSONFailureResponse() {
+    }
+
+    public JSONFailureResponse(String timestamp, Integer status, List<String> errors, String message) {
+        this.timestamp = timestamp;
+        this.status = status;
+        this.errors = errors;
+        this.message = message;
+    }
+
     public String getTimestamp() {
         return timestamp;
     }
@@ -30,6 +42,14 @@ public class JSONFailureResponse {
 
     public void setErrors(List<String> errors) {
         this.errors = errors;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     @Override

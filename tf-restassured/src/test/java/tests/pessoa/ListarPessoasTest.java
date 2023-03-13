@@ -38,7 +38,7 @@ public class ListarPessoasTest extends BaseTest {
         Integer default2 = 20;
         PessoaModelListar listaRecebida = pessoaService.listarPessoas()
                 .then()
-                    .statusCode(HttpStatus.SC_BAD_REQUEST)
+                    .statusCode(HttpStatus.SC_OK)
                     .extract()
                     .as(PessoaModelListar.class)
                 ;

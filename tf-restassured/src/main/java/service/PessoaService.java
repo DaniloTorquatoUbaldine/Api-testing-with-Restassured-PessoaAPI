@@ -114,28 +114,4 @@ public class PessoaService {
         return response;
     }
 
-    public Response deleterPessoa() {
-
-        Response response =
-                given()
-                        .header("Authorization", Autenticacao.token())
-                        .pathParam("idPessoa", "")
-                .when()
-                        .delete("/pessoa/{idPessoa}")
-                ;
-
-        return response;
-    }
-    public Response deleterPessoa(String idPessoa) {
-
-        Response response =
-                given()
-                        .header("Authorization", Autenticacao.token())
-                        .pathParam("idPessoa", idPessoa)
-                .when()
-                        .delete("/pessoa/{idPessoa}")
-                ;
-
-        return response;
-    }
 }
