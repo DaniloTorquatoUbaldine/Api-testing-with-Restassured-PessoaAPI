@@ -20,8 +20,6 @@ public class AtualizarPessoaTest extends BaseTest {
         var pessoaRecebida = pessoaService.AtualizarPessoa(pessoaCadastrada.getIdPessoa())
                 .then()
                 .statusCode(HttpStatus.SC_OK)
-                //.extract()
-                //.as(PessoaModel.class)
                 ;
         pessoaRecebida.log().body();
     }
@@ -32,8 +30,6 @@ public class AtualizarPessoaTest extends BaseTest {
         var pessoaRecebida = pessoaService.AtualizarPessoa(999999999)
                 .then()
                 .statusCode(HttpStatus.SC_NOT_FOUND)
-                //.extract()
-                //.as(PessoaModel.class)
                 ;
         pessoaRecebida.log().body();
     }
